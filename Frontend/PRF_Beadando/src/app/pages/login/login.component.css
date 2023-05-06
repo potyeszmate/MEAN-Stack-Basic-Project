@@ -1,0 +1,123 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #007bff;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    font-size: 18px;
+    padding: 8px;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  button i {
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #0062cc;
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .fa {
+    margin-right: 5px;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .container label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    width: 30px;
+  }
+  
+  .container input[type="text"],
+  .container input[type="password"] {
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .container button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .container button:hover {
+    background-color: #0062cc;
+  }
+  
+  .container button:active {
+    transform: translateY(1px);
+  }
+  
+  .container div.error {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+  }

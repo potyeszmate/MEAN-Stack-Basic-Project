@@ -1,0 +1,47 @@
+ 
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<nav> 
+  <app-navbar></app-navbar>
+</nav>
+
+<br><br>
+
+
+<div class="container mt-5">
+  <div class="card p-4 border-primary shadow">
+    <div class="card-body">
+      <h2 class="text-center mb-4">{{username}} jogosultságának módosítása</h2>
+      <form div class="center" #teamForm="ngForm" (ngSubmit)="onSubmit(teamForm)">
+
+        <div class="form-group">
+          <label for="accessLevel">Jogosultság:</label>
+          <select class="form-control" id="accessLevel" name="accessLevel" required [(ngModel)]="user!.accesLevel">
+          <option value="">Jogosultság kiválasztása</option>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        </div>
+
+        <div class="text-center button-container">
+        <button type="submit" class="btn btn-primary">
+          <span class="material-symbols-outlined">
+            edit
+          </span> Felhasználó módosítása
+        </button>
+
+        <button class="back-button" (click)="goToBack()">
+          <span class="material-symbols-outlined">arrow_back_ios</span> Vissza
+        </button>
+      </div>
+
+    </form>
+    </div>
+    
+  </div>
+  
+</div>

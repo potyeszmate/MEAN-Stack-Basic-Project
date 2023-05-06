@@ -1,0 +1,28 @@
+<head> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<nav> 
+    <app-navbar></app-navbar>
+</nav>
+
+<br> <br>
+<div class="container">
+    <h2>Jelentkezz be </h2>
+
+    <div>
+        <label for="username">Felhasználónév</label>
+        <input type="text" id="username" [(ngModel)]="username">
+    </div>
+
+    <div>
+        <label for="password">Jelszó</label>
+        <input type="text" id="password" [(ngModel)]="password">
+    </div>
+    <button (click)="login()"><i class="fa fa-sign-in"></i>Bejelentkezés</button>
+    <button (click)="navToRegister()"><i class="fa fa-user-plus"></i>Regisztráció</button>
+
+
+    <div *ngIf="errorMessage">{{errorMessage}}</div>
+</div>

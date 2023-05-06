@@ -1,0 +1,108 @@
+.container {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: auto;
+    width: 500px;
+    background-color: white;
+  }
+  
+
+
+
+  
+  form div {
+    margin: 10px 0;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0062cc;
+  }
+  
+  button i {
+    margin-right: 10px;
+  }
+
+  .material-symbols-outlined {
+    /* padding-top: 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .back-button .material-icons-outlined {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+
+  }
+  
+  .button-text {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-primary .material-symbols-outlined {
+    margin-right: 0.5rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    flex-basis: 48%;
+  }

@@ -1,0 +1,39 @@
+<head>
+	<title>Player Details</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <div class="container">
+      <div class="navbar-container">
+
+        <div class="left-section">
+          <img src="assets/football.svg" alt="Football Icon">
+        </div>
+
+        <div class="left"> 
+          <button (click)="goToHome()">Home</button>
+        </div>
+
+        <div class="left-side" *ngIf="loggedInAccesLevel === 'admin' "> 
+            <button (click)="goToAdminTeams()">Csapat módosítás</button>
+            <button (click)="goToAdminPlayers()">Játékos módosítás</button>
+            <button (click)="goToAdminUsers()">Felhasználó módosítás</button>
+        </div>
+
+        <div class="left-side">
+
+          <div class="right-section">
+            <button (click)="goToProfile()"><span class="material-symbols-outlined">account_circle</span></button>
+          </div>
+
+          <div class="right-section">
+            <button (click)="onLogoutClick()"><span class="material-symbols-outlined">logout</span></button>
+          </div>
+          
+        </div>
+
+        </div>
+    </div>
+  </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player Details</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<nav> 
+	<app-navbar></app-navbar>
+</nav>
+
+<body>
+	<div class="player-card">
+		<h1>A profilod</h1>
+		<p><span class="material-symbols-outlined">
+			person
+			</span><strong>Felhasználónév: </strong> {{ loggedInUsername }}</p>
+		
+			<p><span class="material-symbols-outlined">
+			mail
+			</span><strong>Email cím: </strong> {{ loggedInEmail }}</p>
+		
+			<button (click)="goToHome()">
+				<span class="material-symbols-outlined">arrow_back_ios</span>
+				Back
+			</button>
+			  
+	  </div>
+	  
+</body>
+</html>

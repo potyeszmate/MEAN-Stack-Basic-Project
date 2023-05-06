@@ -1,0 +1,26 @@
+<!-- <button (click)="goToLogin()">Logout</button>
+<button (click)="goToAdminTeams()">Teams</button>
+<button (click)="goToAdminPlayers()">Players</button>
+<button (click)="goToAdminUsers()">Users</button> -->
+<head>
+  <!-- <link rel="stylesheet" href="/path/to/font-awesome/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<nav> 
+<app-navbar></app-navbar>
+</nav>
+
+<p>Welcome to Teams page</p>
+
+<div class="teams-container">
+  
+  <div class="team-card" *ngFor="let team of teams">
+    <h2>{{team.teamname}}</h2>
+    <div class="button-container">
+      <button class="btn-players" (click)="goToPlayer(team.teamname)"><i class="fas fa-users"></i> Players</button>
+      <button class="btn-details" (click)="goToDetails(team.teamname)"><i class="fas fa-info-circle"></i> Team details</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,151 @@
+.container {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-section a, .right-section button {
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-section a {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .center-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .right-section button {
+    margin-left: 10px;
+  }
+  
+  .fa-user, .fa-user-circle {
+    font-size: 24px;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .left-section img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .material-symbols-outlined-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+    
+  }
+
+  .left-side {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-section {
+    padding-left: 10px;
+  }
+
+  .center-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .center-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .left-side button {
+    background-color: #fafafa;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+  .left-side button:hover {
+    background-color: #63dae5;
+  }
+  
+  .left-side button:focus {
+    outline: none;
+  }
+
+
+  
+  .left button {
+    background-color: #fafafa;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+
+}
+  
+  .left button:hover {
+    background-color: #63dae5;
+  }
+  
+  .left button:focus {
+    outline: none;
+  }
+  
+  
+  

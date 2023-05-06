@@ -1,0 +1,44 @@
+<head>
+  <!-- <link rel="stylesheet" href="/path/to/font-awesome/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<nav> 
+  <app-navbar></app-navbar>
+</nav>
+
+<h1>Teams</h1>
+<!-- <button (click)="goToHome()">Home</button> -->
+
+<button class="buttonadd" (click)="goToAddTeam()">
+  <span class="material-symbols-outlined">add</span>
+</button>
+
+<div class="players-container">
+
+  <div class="player-card" *ngFor="let team of teams">
+    <h2>{{team.teamname}}</h2>
+    <p>Country: {{team.country}}</p>
+    <p>Team Value: {{team.teamvalue}}</p>
+    <p>Stadium: {{team.stadium}}</p>
+
+    <div class="buttons">
+      <button class="edit-button" (click)="goToEditTeam(team.teamname)">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="delete-button" mat-raised-button color="warn" (click)="openConfirmationDialog(team.teamname)">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<ng-container *ngIf="isConfirmationDialogOpen">
+  <app-confirmation-dialog 
+    [title]="'Confirm Deletion'" 
+    [message]="'Are you sure you want to delete ' + teamtoDelete + '?'"
+    (confirmed)="deleteTeam()"
+    (dialogClosed)="handleDialogClosed()">
+  </app-confirmation-dialog>
+</ng-container>

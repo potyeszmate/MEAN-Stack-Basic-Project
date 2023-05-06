@@ -1,0 +1,25 @@
+<!-- <button (click)="goToHome()">Home</button> -->
+
+<!-- <button (click)="goToHome()">Home</button> -->
+<head>
+    <!-- <link rel="stylesheet" href="/path/to/font-awesome/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+
+  <nav> 
+    <app-navbar></app-navbar>
+  </nav>
+  
+<p class="page-title">A {{message}} játékosai</p>
+
+<button class="back-button" (click)="goToHome()">
+  <span class="material-symbols-outlined">arrow_back_ios</span>
+  Back
+  </button>
+
+<div class="players-container">
+  <div class="player-card" *ngFor="let player of players">
+    <h2>{{player.playername}}</h2>
+    <button class="btn-details" (click)="goToDetails(player.playername)"><i class="fas fa-info-circle"></i>Játékos részletek</button>
+  </div>
+</div>
