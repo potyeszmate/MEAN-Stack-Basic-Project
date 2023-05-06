@@ -22,10 +22,6 @@ export class UserService {
   public createUser(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrlAdminUSerAdd, user);
   }
-
-  // public updateUser(username: string, accesLevel: number): Observable<User> {
-  //   return this.http.put<User>(`${this.apiUrl}/${username}`, { accesLevel });
-  // }
   
   // PUT API to update a player
   public updateUser(username: string, user: User) {

@@ -89,8 +89,10 @@ app.get('/', (req, res, next) => {
 app.use('/', require('./routes'));
 
 app.use((req, res, next) => {
-    console.log("hibakezelo");
-    res.status(404).send('A kert eroforras nem talalhato');
+    //console.log("hibakezelo");
+    //res.status(404).send('A kert eroforras nem talalhato');
+    res.status(404).sendFile(path.join(__dirname, 'public', 'index.html'));
+
 })
 
 app.listen(port, () => {

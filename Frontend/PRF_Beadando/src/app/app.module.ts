@@ -24,6 +24,7 @@ import { PlayerDetailsComponent } from './pages/player_details/player-details.co
 import { ConfirmationDialogComponent } from './pages/admin/confirmation-dialog/confirmation-dialog.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ConfirmationDialogComponent,
     NavbarComponent,
     ProfileComponent,
+    ErrorComponent,
   
   ],
   imports: [

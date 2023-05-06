@@ -14,43 +14,38 @@
 <div class="container mt-5">
   <div class="card p-4 border-primary shadow">
     <div class="card-body">
-      <h2 class="text-center mb-4">Update Team</h2>
+      <h2 class="text-center mb-4">{{playername}} módosítása</h2>
       <form div class="center" #teamForm="ngForm" (ngSubmit)="onSubmit(teamForm)">
         <div class="form-group">
-          <label for="value">Value:</label>
+          <label for="value">Érték:</label>
           <input type="number" id="value" name="value" [(ngModel)]="player!.value" required>
         </div>
         <div class="form-group">
-          <label for="goals">Goals:</label>
+          <label for="goals">Gólok:</label>
       <input type="number" id="goals" name="goals" [(ngModel)]="player!.goals" required>
         </div>
         <div class="form-group">
-          <label for="country">Country:</label>
+          <label for="country">Ország:</label>
           <input type="text" id="country" name="country" [(ngModel)]="player!.country" required>
         </div>
 
-        <!-- <div class="form-group">
-          <label for="teamname">Team Name:</label>
-      <input type="text" id="teamname" name="teamname" [(ngModel)]="player!.teamname" required>
-        </div> -->
-
         <div class="form-group">
-          <label for="teamname">Team Name:</label>
+          <label for="teamname">Csapat név:</label>
           <select class="form-control" id="teamname" name="teamname" [(ngModel)]="player!.teamname" required>
             <option *ngFor="let team of teams" [value]="team.teamname">{{team.teamname}}</option>
           </select>
         </div>
-        
-
-        <div></div>
+        <div *ngIf="teamForm.invalid && (teamForm.dirty || teamForm.touched)">
+          <div class="text-danger">Minden mező kitöltése kötelező.</div>
+        </div>
         <div class="text-center button-container">
-        <button type="submit" class="btn btn-primary">
-          <span class="material-symbols-outlined">
-            edit
-          </span> Játékos módosítása
-        </button>
+          <button type="submit" class="btn btn-primary" [disabled]="!teamForm.valid">
+            <span class="material-symbols-outlined">
+              edit
+            </span> Játékos módosítása
+          </button>
         <button class="back-button" (click)="goToBack()">
-          <span class="material-symbols-outlined">arrow_back_ios</span> Back
+          <span class="material-symbols-outlined">arrow_back_ios</span> Vissza
         </button>
       </div>
     </form>

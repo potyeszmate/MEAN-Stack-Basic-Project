@@ -1,7 +1,5 @@
-
 <head>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 
 <nav> 
@@ -10,12 +8,11 @@
 
 <br><br>
 
-
 <div class="container mt-5">
   <div class="card p-4 border-primary shadow">
     <div class="card-body">
       <h2 class="text-center mb-4">{{teamname}} módosítása</h2>
-      <form div class="center" #teamForm="ngForm" (ngSubmit)="onSubmit(teamForm)">
+      <form class="center" #teamForm="ngForm" (ngSubmit)="onSubmit(teamForm)">
         <div class="form-group">
           <label for="country">Ország:</label>
           <input type="text" class="form-control" id="country" name="country" [(ngModel)]="team!.country" required>
@@ -28,9 +25,11 @@
           <label for="stadium">Stadion:</label>
           <input type="text" class="form-control" id="stadium" name="stadium" [(ngModel)]="team!.stadium" required>
         </div>
-        <div></div>
+        <div *ngIf="teamForm.invalid && (teamForm.dirty || teamForm.touched)">
+          <div class="text-danger">Minden mező kitöltése kötelező.</div>
+        </div>
         <div class="text-center button-container">
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" [disabled]="!teamForm.valid">
           <span class="material-symbols-outlined">
             edit
           </span> Csapat módosítása
@@ -40,8 +39,7 @@
         </button>
       </div>
     </form>
+    <div *ngIf="teamForm.submitted && teamForm.invalid">Minden mezőt kötelező kitölteni!</div>
     </div>
-    
   </div>
-  
 </div>

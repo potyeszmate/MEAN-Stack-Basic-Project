@@ -17,8 +17,6 @@ export class PlayerService {
     return this.http.get<Player[]>(`${this.url}/player/${teamname}`);
   }
 
-
-
   // POST API to add a player
   addPlayer(player: Player) {
     //return this.http.post('/api/players', player);
@@ -30,16 +28,13 @@ export class PlayerService {
   updatePlayer(playername: string, player: Player) {
     //return this.http.put(`/api/players/${playername}`, player);
     return this.http.put(`${this.url}/players/${playername}`,player);
-    
   }
 
   // GET API to list all players
   getAllPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(`${this.url}/players`);
-
   }
   
-
   // GET API to list players with a certain teamname
   getPlayersByTeam(teamname: string) {
     return this.http.get(`/api/players/${teamname}`);

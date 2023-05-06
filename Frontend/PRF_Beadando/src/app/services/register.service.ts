@@ -13,7 +13,8 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   register(usernames: string, email: string, password: string){
-    return this.http.post(environment.url + 'user', { username: usernames, email: email, password: password }, {responseType: 'text'});
+    return this.http.post(environment.url + 'user', { username: usernames, email: email, password: password },
+     {responseType: 'text'});
 
 }
 

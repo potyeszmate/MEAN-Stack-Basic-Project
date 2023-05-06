@@ -4,10 +4,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-confirmation-dialog',
   template: `
     <div class="modal">
-      <h3>{{ title }}</h3>
+      <h3>Törlés megerősítás</h3>
       <p>{{ message }}</p>
-      <button (click)="onConfirm()">Confirm</button>
-      <button (click)="onCancel()">Cancel</button>
+      <button (click)="onConfirm()">Törlés</button>
+      <button (click)="onCancel()">Vissza</button>
     </div>
   `,
   styles: [

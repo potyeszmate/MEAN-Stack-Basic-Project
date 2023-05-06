@@ -1,46 +1,12 @@
-<!-- <h2>Add Player</h2>
-<button (click)="goToBack()">Back</button>
-
-<form #playerForm="ngForm" (ngSubmit)="onSubmit(playerForm)">
-  <div>
-    <label for="playername">Player Name:</label>
-    <input type="text" id="playername" name="playername" [(ngModel)]="player.playername" required>
-  </div>
-  <div>
-    <label for="value">Value:</label>
-    <input type="number" id="value" name="value" [(ngModel)]="player.value" required>
-  </div>
-  <div>
-    <label for="goals">Goals:</label>
-    <input type="number" id="goals" name="goals" [(ngModel)]="player.goals" required>
-  </div>
-  <div>
-    <label for="country">Country:</label>
-    <input type="text" id="country" name="country" [(ngModel)]="player.country" required>
-  </div>
-  <div>
-    <label for="teamname">Team Name:</label>
-    <input type="text" id="teamname" name="teamname" [(ngModel)]="player.teamname" required>
-  </div>
-  <button type="submit">Add Player</button>
-</form>
-
-<div *ngIf="errorMessage">{{ errorMessage }}</div>
- -->
-
-
- 
 <head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<nav> 
+<nav>
   <app-navbar></app-navbar>
 </nav>
 
 <br><br>
-
 
 <div class="container mt-5">
   <div class="card p-4 border-primary shadow">
@@ -63,30 +29,30 @@
           <label for="country">Nemzetiség:</label>
           <input type="text" id="country" name="country" [(ngModel)]="player.country" required>
         </div>
-        <div>
-          <label for="teamname">Csapat:</label>
-          <input type="text" id="teamname" name="teamname" [(ngModel)]="player.teamname" required>
+       
+        <div class="form-group">
+          <label for="teamname">Csapat név:</label>
+          <select class="form-control" id="teamname" name="teamname" [(ngModel)]="player!.teamname" required>
+            <option *ngFor="let team of teams" [value]="team.teamname">{{team.teamname}}</option>
+          </select>
         </div>
+        <div *ngIf="teamForm.invalid && (teamForm.dirty || teamForm.touched)">
+          <div class="text-danger">Minden mező kitöltése kötelező.</div>
+        </div>
+        <div class="text-center button-container">
 
-      <div class="text-center button-container">
+         <button type="submit" class="btn btn-primary" [disabled]="!teamForm.valid">
+            <span class="material-symbols-outlined">
+              add_circle
+            </span> Játékos hozzáadása
+          </button>
 
-        <button type="submit" class="btn btn-primary"><span class="material-symbols-outlined">
-          add_circle
-          </span>Játékos hozzáadása</button>
-
-        <button class="back-button" (click)="goToBack()">
-          <span class="material-symbols-outlined">arrow_back_ios</span> Vissza
-        </button>
-      </div>
-
-    </form>
-    <div *ngIf="errorMessage">{{ errorMessage }}</div>
-
+          <button class="back-button" (click)="goToBack()">
+            <span class="material-symbols-outlined">arrow_back_ios</span> Vissza
+          </button>
+        </div>
+      </form>
+      <div *ngIf="errorMessage">{{ errorMessage }}</div>
     </div>
-    
   </div>
-  
 </div>
-
-
-    

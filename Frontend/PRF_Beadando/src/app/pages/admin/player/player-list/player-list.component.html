@@ -37,8 +37,8 @@
 
 <ng-container *ngIf="isConfirmationDialogOpen">
   <app-confirmation-dialog 
-    [title]="'Confirm Deletion'" 
-    [message]="'Are you sure you want to delete ' + playerToDelete+ '?'"
+    [title]="'Törlés megerősítás'" 
+    [message]="'Biztos törölni akarod ' + playerToDelete + '-t ?'"
     (confirmed)="deletePlayer()"
     (dialogClosed)="handleDialogClosed()">
   </app-confirmation-dialog>

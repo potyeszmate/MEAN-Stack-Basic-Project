@@ -26,13 +26,15 @@
         </select>
 
         </div>
-
+        <div *ngIf="teamForm.invalid && (teamForm.dirty || teamForm.touched)">
+          <div class="text-danger">Minden mező kitöltése kötelező.</div>
+        </div>
         <div class="text-center button-container">
-        <button type="submit" class="btn btn-primary">
-          <span class="material-symbols-outlined">
-            edit
-          </span> Felhasználó módosítása
-        </button>
+          <button type="submit" class="btn btn-primary" [disabled]="!teamForm.valid">
+            <span class="material-symbols-outlined">
+              edit
+            </span> Felhasználó módosítása
+          </button>
 
         <button class="back-button" (click)="goToBack()">
           <span class="material-symbols-outlined">arrow_back_ios</span> Vissza

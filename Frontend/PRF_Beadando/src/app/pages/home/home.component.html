@@ -11,15 +11,15 @@
 <app-navbar></app-navbar>
 </nav>
 
-<p>Welcome to Teams page</p>
+<p>Csapatok</p>
 
 <div class="teams-container">
   
   <div class="team-card" *ngFor="let team of teams">
     <h2>{{team.teamname}}</h2>
     <div class="button-container">
-      <button class="btn-players" (click)="goToPlayer(team.teamname)"><i class="fas fa-users"></i> Players</button>
-      <button class="btn-details" (click)="goToDetails(team.teamname)"><i class="fas fa-info-circle"></i> Team details</button>
+      <button class="btn-players" (click)="goToPlayer(team.teamname)"><i class="fas fa-users"></i>Játékosok</button>
+      <button class="btn-details" (click)="goToDetails(team.teamname)"><i class="fas fa-info-circle"></i>Csapat részletek</button>
     </div>
   </div>
 </div>

@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<nav> 
+<!-- <nav> 
     <app-navbar></app-navbar>
-</nav>
+</nav> -->
 
 <br> <br>
 <div class="container">
@@ -18,8 +18,8 @@
 
     <div>
         <label for="password">Jelszó</label>
-        <input type="text" id="password" [(ngModel)]="password">
-    </div>
+        <input type="password" id="password" [(ngModel)]="password">
+      </div>
     <button (click)="login()"><i class="fa fa-sign-in"></i>Bejelentkezés</button>
     <button (click)="navToRegister()"><i class="fa fa-user-plus"></i>Regisztráció</button>
 

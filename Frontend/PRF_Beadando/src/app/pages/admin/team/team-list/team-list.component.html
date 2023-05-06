@@ -7,7 +7,7 @@
   <app-navbar></app-navbar>
 </nav>
 
-<h1>Teams</h1>
+<h1>Csapatok</h1>
 <!-- <button (click)="goToHome()">Home</button> -->
 
 <button class="buttonadd" (click)="goToAddTeam()">
@@ -18,9 +18,9 @@
 
   <div class="player-card" *ngFor="let team of teams">
     <h2>{{team.teamname}}</h2>
-    <p>Country: {{team.country}}</p>
-    <p>Team Value: {{team.teamvalue}}</p>
-    <p>Stadium: {{team.stadium}}</p>
+    <p>Ország: {{team.country}}</p>
+    <p>Érték: {{team.teamvalue}} millió dollár</p>
+    <p>Stadion: {{team.stadium}} </p>
 
     <div class="buttons">
       <button class="edit-button" (click)="goToEditTeam(team.teamname)">

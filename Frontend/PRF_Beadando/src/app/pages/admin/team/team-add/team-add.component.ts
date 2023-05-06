@@ -37,12 +37,14 @@ export class TeamAddComponent {
         console.error(err);
         this.errorMessage = err.error.message;
 
-        // window.location.reload();
+        window.location.reload();
 
       }
 
       
     );
+    //window.location.reload();
+
     this.router.navigate(['/admin-teams']);
 
 
@@ -52,4 +54,19 @@ export class TeamAddComponent {
     this.router.navigate(['/admin-teams']);
 
   }
+
+  // set an initial value to disable the submit button
+disableSubmitButton = true;
+
+// function to check if all required fields have a value
+checkAllFieldsAreFilled() {
+  if (this.team.teamname && this.team.country && this.team.teamvalue && this.team.stadium) {
+    // enable the submit button
+    this.disableSubmitButton = false;
+  } else {
+    // disable the submit button
+    this.disableSubmitButton = true;
+  }
+}
+
 }

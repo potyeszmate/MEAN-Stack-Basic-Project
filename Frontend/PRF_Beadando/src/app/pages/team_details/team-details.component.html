@@ -6,15 +6,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<!-- <button (click)="goToHome()">Home</button> -->
 
-<!-- <body>
-	<h1 class="team-details-header">Team Details</h1>
-	<p class="team-details"><strong>Team Name:</strong> {{ team!.teamname }}</p>
-	<p class="team-details"><strong>Country:</strong> {{ team!.country }}</p>
-	<p class="team-details"><strong>Team Value:</strong> {{ team!.teamvalue }}</p>
-	<p class="team-details"><strong>Stadium:</strong> {{ team!.stadium }}</p>
-</body> -->
 <nav> 
 	<app-navbar></app-navbar>
 </nav>
@@ -23,23 +15,23 @@
 	
 
 <div class="player-card">
-	<h1>{{ teamname }} 's details</h1>
+	<h1>{{ teamname }} részletes adatai</h1>
 	<p><span class="material-symbols-outlined">
 		groups_2
-		</span><strong>Team name: </strong> {{team!.teamname }}</p>
+		</span><strong>Csapat neve: </strong> {{team!.teamname }}</p>
 	<p><span class="material-symbols-outlined">
 		flag
-		</span><strong>Country: </strong> {{ team!.country }}</p>
+		</span><strong>Ország: </strong> {{ team!.country }}</p>
 	<p><span class="material-symbols-outlined">
 		attach_money
-		</span><strong>Value: </strong> {{ team!.teamvalue }} million dollars</p>
+		</span><strong>Érték: </strong> {{ team!.teamvalue }} millió dollár</p>
 	<p><span class="material-symbols-outlined">
 		stadium
-		</span><strong>Stadium: </strong> {{team!.stadium }}</p>
+		</span><strong>Stadion: </strong> {{team!.stadium }}</p>
 	
 		<button (click)="goToHome()">
 			<span class="material-symbols-outlined">arrow_back_ios</span>
-			Back
+			Vissza
 		  </button>
 		  
   </div>

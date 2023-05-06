@@ -20,10 +20,6 @@ export class ExampleService {
     return this.http.post<any>(this.url, team);
   }
 
-  // updateTeam(teamname: string, teamvalue: number): Observable<Team> {
-  //   return this.http.put<Team>(`${this.url}/${teamname}`, { teamvalue });
-  // }
-
    // PUT API to update a player
    updateTeam(teamname: string, team: Team) {
     //return this.http.put(`/api/players/${playername}`, player);
